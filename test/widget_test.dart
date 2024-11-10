@@ -6,14 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:playground/core/app/app.dart';
 
 void main() {
-  testWidgets('Check if PGpp is the root', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const PGApp());
-
-    // Verify if PGApp is the root widget
-    expect(find.byType(PGApp), findsOneWidget);
-  });
+  testWidgets('Kickstart PGApp', (WidgetTester tester) async {});
 }

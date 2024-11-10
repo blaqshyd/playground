@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:playground/features/auth/view/splash_view.dart';
 
 import '../../features/file_upload/view/upload_file.screen.dart';
+import '../../features/payment/flutter_payment.dart';
 
 class PGApp extends StatelessWidget {
   const PGApp({super.key});
@@ -9,12 +11,13 @@ class PGApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'PG',
-      theme: ThemeData(),
+      theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      initialRoute: '/upload',
+      initialRoute: '/',
       routes: {
-        '/': (context) => const Scaffold(),
+        '/': (context) => const SplashView(),
         '/upload': (context) => const UploadFileScreen(),
+        '/payment': (context) => const PaypalPayment(),
       },
     );
   }
