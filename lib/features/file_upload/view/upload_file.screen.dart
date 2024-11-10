@@ -53,7 +53,7 @@ class _UploadFileScreenState extends State<UploadFileScreen> {
                 log('2$file');
                 return ElevatedButton(
                   onPressed: () async {
-                  await  UploadImageService().uploadImage(file!);
+                    await UploadImageService().uploadImage(file!);
                     // throw Exception('dynamic');
                   },
                   child: const Text('Upload'),
