@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 import 'dart:io';
 
@@ -8,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class UploadImageService {
   Future<void> uploadImage(File image) async {
-
     String fileName = image.path.split('/').last;
 
     FormData formData = FormData.fromMap({
@@ -22,8 +20,7 @@ class UploadImageService {
     if (sessionCookie == null) {
       log("Session cookie is not available.");
       return;
-    }
-    else{
+    } else {
       log(sessionCookie);
     }
 
@@ -35,7 +32,10 @@ class UploadImageService {
     };
     try {
       log("Process began");
-      Response response = await dio.post("${Env.baseUrl}drug-vetting", data: formData,);
+      Response response = await dio.post(
+        "${Env.baseUrl}drug-vetting",
+        data: formData,
+      );
       if (response.statusCode == 200) {
         log("Image uploaded successfully");
         log(response.data);
@@ -46,7 +46,6 @@ class UploadImageService {
       log("Exception caught: $e");
     }
   }
-
 
   Future<String?> _retrieveSessionCookie() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
