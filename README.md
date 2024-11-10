@@ -1,4 +1,4 @@
-# playground
+# Playground
 
 A new Flutter project.
 
