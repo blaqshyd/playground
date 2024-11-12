@@ -1,7 +1,5 @@
 name: playground
 description: "A playground for fast implementations of tasks."
-
-
 publish_to: 'none' 
 
 version: 1.0.0+1
@@ -14,9 +12,7 @@ dependencies:
     sdk: flutter
   
   cupertino_icons: ^1.0.6
-  
-  flutter_native_splash: ^2.4.2
-  flutter_launcher_icons: ^0.14.1
+
   dio: ^5.5.0+1
   image_picker: ^1.1.2
   logger: ^2.4.0
@@ -28,14 +24,34 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
- 
+  flutter_native_splash: ^2.4.2
+  flutter_launcher_icons: ^0.14.1
   flutter_lints: ^5.0.0
 
-
 flutter:
-
   assets:
     - shorebird.yaml
+    - assets/fonts/
+    - assets/images/
+    - assets/svgs/
+
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Manrope-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Manrope-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Manrope-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Manrope-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Manrope-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Manrope-ExtraLight.ttf
+          weight: 200
 
   uses-material-design: true
 
