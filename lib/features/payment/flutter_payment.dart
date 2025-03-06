@@ -1,19 +1,14 @@
-// import 'dart:developer';
+import 'package:flutter/material.dart';
 
-// import 'package:flutter/material.dart';
-// import 'package:flutter_paypal_checkout/flutter_paypal_checkout.dart';
+class PaypalPayment extends StatefulWidget {
+  const PaypalPayment({super.key});
 
-// import '../../core/env.dart';
+  @override
+  State<PaypalPayment> createState() => _PaypalPaymentState();
+}
 
-// class PaypalPayment extends StatefulWidget {
-//   const PaypalPayment({super.key});
-
-//   @override
-//   State<PaypalPayment> createState() => _PaypalPaymentState();
-// }
-
-// class _PaypalPaymentState extends State<PaypalPayment> {
-//   void _incrementCounter() {
+class _PaypalPaymentState extends State<PaypalPayment> {
+//   void _paymentMethod() {
 //     Navigator.of(context).push(MaterialPageRoute(
 //       builder: (BuildContext context) => PaypalCheckout(
 //         sandboxMode: true,
@@ -26,27 +21,13 @@
 //             "amount": {
 //               "total": '70',
 //               "currency": "USD",
-//               "details": {
-//                 "subtotal": '70',
-//                 "shipping": '0',
-//                 "shipping_discount": 0
-//               }
+//               "details": {"subtotal": '70', "shipping": '0', "shipping_discount": 0}
 //             },
 //             "description": "The payment transaction description.",
 //             "item_list": {
 //               "items": [
-//                 {
-//                   "name": "Apple",
-//                   "quantity": 4,
-//                   "price": '5',
-//                   "currency": "USD"
-//                 },
-//                 {
-//                   "name": "Pineapple",
-//                   "quantity": 5,
-//                   "price": '10',
-//                   "currency": "USD"
-//                 }
+//                 {"name": "Apple", "quantity": 4, "price": '5', "currency": "USD"},
+//                 {"name": "Pineapple", "quantity": 5, "price": '10', "currency": "USD"}
 //               ],
 //               "shipping_address": {
 //                 "recipient_name": "Raman Singh",
@@ -78,25 +59,26 @@
 //     setState(() {});
 //   }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-//         title: const Text('Paypal'),
-//       ),
-//       body: const Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[],
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton.extended(
-//         onPressed: _incrementCounter,
-//         tooltip: 'Increment',
-//         label: const Text('Checkout'),
-//         icon: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Paypal'),
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        // onPressed: _paymentMethod,
+        onPressed: null,
+        tooltip: 'Increment',
+        label: const Text('Checkout'),
+        icon: const Icon(Icons.add),
+      ),
+    );
+  }
+}

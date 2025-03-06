@@ -52,6 +52,7 @@ class _UploadFileScreenState extends State<UploadFileScreen> {
               builder: (context, file, child) {
                 log('2$file');
                 return ElevatedButton(
+                  key: Key('uploadKey'),
                   onPressed: () async {
                     await UploadImageService().uploadImage(file!);
                     // throw Exception('dynamic');

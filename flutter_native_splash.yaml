@@ -1,0 +1,23 @@
+flutter_native_splash:
+  image: "assets/images/splash/logo.png"
+  background_image: "assets/images/splash/background.png"
+  branding: assets/images/splash/android_branding.png
+
+## DARK MODE
+  background_image_dark: "assets/images/splash/background_dark.png"
+  image_dark: "assets/images/splash/logo_dark.png"
+  branding_dark: "assets/images/splash/branding_dark.png"
+  branding_mode: bottom
+
+  android_12:
+    image: "assets/images/splash/android_logo.png"
+    branding: assets/images/splash/android_branding.png
+    branding_dark: "assets/images/splash/android_branding.png"
+    branding_mode: bottom
+
+  ################## dart run flutter_native_splash:create
+  ################## dart run flutter_native_splash:remove
+    # color: "#9a1099"
+    # color_dark: "#9a1099"
+
+
